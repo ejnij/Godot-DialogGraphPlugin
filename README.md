@@ -8,8 +8,8 @@ This is the result - a simple plugin that lets you create dialog graphs.
 
 ## Usage
 The plugin has two parts, the editor and the manager, but before that is explained, lets go over the different nodes.
-
 ### Dialog Nodes
+[![Plugin icon](/nodes.png)](https://raw.githubusercontent.com/ejnij/Godot-DialogGraphPlugin/master/nodes.png)
 #### Conversation
 Conversation is the starting point of a dialog graph. You can have multiple Conversations in a single file, but each of them has to have its own unique name.
 In every file there's only one Conversation that's set as the default one. This means it would be the default dialog graph that would start in that specific file, unless the Manager node is provided with a name of a different Conversation.

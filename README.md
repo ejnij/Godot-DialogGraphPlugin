@@ -36,4 +36,5 @@ The manager node is used to manage and communicate with the dialog graph you exp
 ## Bugs / Issues
 
 1. Translation being entered doesn't automatically scale the nodes. It does update when you Load though.
-2 The code for the Manager node is pretty hack-y and not OOP-y. Might change that later.
+2 The code for the Manager node is pretty hack-y and not OO-y. Might change that later.
+3. Graph validity isn't reinforced, so some stuff you can get away with while exporting, that would crash the Manager node.

@@ -3,7 +3,7 @@ I needed an easy way to create dialogs for my game. What I needed wasn't that co
 This is the result - a simple plugin that lets you create dialog graphs.
 
 ## Installation
-1) Place the files in your project folder.
+1) Place the 'addons' folder in your project folder.
 2) In the editor - Project -> Project Settings -> Plugins -> Change the status to 'Active'.
 
 ## Usage

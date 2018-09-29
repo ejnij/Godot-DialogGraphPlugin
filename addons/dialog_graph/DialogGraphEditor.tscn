@@ -15,7 +15,6 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Size Flags" ]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -360,12 +359,12 @@ resizable = true
 dialog_hide_on_ok = false
 mode_overrides_title = false
 mode = 4
-access = 2
+access = 0
 filters = PoolStringArray( "*.json ; JSON file" )
 show_hidden_files = false
-current_dir = "D:/Anog/Godot Projects/Dialog Graph Editor"
+current_dir = "res://"
 current_file = ""
-current_path = "D:/Anog/Godot Projects/Dialog Graph Editor/"
+current_path = "res://"
 _sections_unfolded = [ "filters" ]
 
 [node name="ExportWindow" type="FileDialog" parent="."]
@@ -391,12 +390,12 @@ resizable = true
 dialog_hide_on_ok = false
 mode_overrides_title = false
 mode = 4
-access = 2
+access = 0
 filters = PoolStringArray( "*.json ; JSON file" )
 show_hidden_files = false
-current_dir = "D:/Anog/Godot Projects/Dialog Graph Editor"
+current_dir = "res://"
 current_file = ""
-current_path = "D:/Anog/Godot Projects/Dialog Graph Editor/"
+current_path = "res://"
 _sections_unfolded = [ "Margin", "Popup", "filters" ]
 
 [node name="LoadWindow" type="FileDialog" parent="."]
@@ -422,12 +421,12 @@ resizable = true
 dialog_hide_on_ok = true
 mode_overrides_title = true
 mode = 0
-access = 2
+access = 0
 filters = PoolStringArray( "*.json ; JSON file" )
 show_hidden_files = false
-current_dir = "D:/Anog/Godot Projects/Dialog Graph Editor"
+current_dir = "res://"
 current_file = ""
-current_path = "D:/Anog/Godot Projects/Dialog Graph Editor/"
+current_path = "res://"
 _sections_unfolded = [ "Dialog", "Popup" ]
 
 [node name="ClearWindow" type="ConfirmationDialog" parent="."]

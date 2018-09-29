@@ -83,8 +83,10 @@ func create_choice(data, graph_node):
 	if data["sc"].has(graph_node):
 		var next = []
 		for i in range(size):
-			#nodes[graph_node]["next"+String(i)] = data["sc"][graph_node][String(i)]["to"]
-			next.append(data["sc"][graph_node][String(i)]["to"])
+			if data["sc"][graph_node].has(String(i)):
+				next.append(data["sc"][graph_node][String(i)]["to"])
+			else:
+				next.append(null)
 		nodes[graph_node]["next"] = next
 	var choice = []
 	for i in range(size):

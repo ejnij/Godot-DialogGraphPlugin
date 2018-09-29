@@ -1,4 +1,4 @@
-# [![Plugin icon](/addons/dialog_graph/icon.png)](https://godotengine.org) Dialog Graph Plugin for Godot
+# [![Plugin icon](/addons/dialog_graph/icon.png)](https://github.com/ejnij/Godot-DialogGraphPlugin) Dialog Graph Plugin for Godot
 I needed an easy way to create dialogs for my game. What I needed wasn't that complex, but I did a bit extra for future-proofing.
 This is the result - a simple plugin that lets you create dialog graphs.
 

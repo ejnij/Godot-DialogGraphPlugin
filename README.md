@@ -32,3 +32,8 @@ The editor is used for designing dialog graphs which can then be exported and us
 
 ### Manager node
 The manager node is used to manage and communicate with the dialog graph you exported, while your game is running.
+
+## Bugs / Issues
+
+1. Translation being entered doesn't automatically scale the nodes. It does update when you Load though.
+2 The code for the Manager node is pretty hack-y and not OOP-y. Might change that later.

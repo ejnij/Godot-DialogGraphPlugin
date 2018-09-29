@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/dialog_graph/GraphNode.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/dialog_graph/ChoiceGraphNode.gd" type="Script" id=2]
+
+[node name="ChoiceGraphNode" instance=ExtResource( 1 )]
+margin_right = 238.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 238, 98 )
+title = "Choice"
+slot/1/left_color = Color( 0.913725, 0.517647, 0.0980392, 1 )
+slot/1/right_enabled = true
+slot/1/right_color = Color( 0.913725, 0.517647, 0.0980392, 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "node_line_type", "slot" ]
+
+
+[editable path="NodeLineCount"]

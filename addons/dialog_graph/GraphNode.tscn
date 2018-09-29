@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/dialog_graph/GraphNode.gd" type="Script" id=1]
+[ext_resource path="res://addons/dialog_graph/GraphNodeLine.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/dialog_graph/GraphNodeLineCount.tscn" type="PackedScene" id=3]
+
+[node name="GraphNode" type="GraphNode"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 60.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 238, 63 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+title = "Base"
+offset = Vector2( 0, 0 )
+show_close = true
+resizable = true
+selected = false
+comment = false
+overlay = 0
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 0.913725, 0.517647, 0.0980392, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 0.913725, 0.517647, 0.0980392, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "node_line_type", "slot", "slot/0" ]
+node_line_type = ExtResource( 2 )
+slot_color = Color( 0.913725, 0.517647, 0.0980392, 1 )
+start_amount = 1
+max_amount = 16
+
+[node name="NodeLineCount" parent="." instance=ExtResource( 3 )]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 222.0
+margin_bottom = 58.0
+
+[node name="HBox" parent="NodeLineCount" index="0"]
+margin_bottom = 29.0
+
+[node name="Label" parent="NodeLineCount/HBox" index="0"]
+margin_top = 5.0
+margin_bottom = 19.0
+
+[node name="Minus" parent="NodeLineCount/HBox" index="1"]
+margin_bottom = 24.0
+
+[node name="Plus" parent="NodeLineCount/HBox" index="2"]
+margin_bottom = 24.0
+
+[node name="LineEdit" parent="NodeLineCount/HBox" index="3"]
+margin_bottom = 24.0
+
+[connection signal="close_request" from="." to="." method="_on_Node_close_request"]
+[connection signal="resize_request" from="." to="." method="_on_Node_resize_request"]
+[connection signal="pressed" from="NodeLineCount/HBox/Minus" to="." method="_on_Minus_pressed"]
+[connection signal="pressed" from="NodeLineCount/HBox/Plus" to="." method="_on_Plus_pressed"]
+
+[editable path="NodeLineCount"]

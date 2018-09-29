@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/dialog_graph/GraphNode.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/dialog_graph/ConditionGraphNode.gd" type="Script" id=2]
+
+[node name="ConditionGraphNode" instance=ExtResource( 1 )]
+margin_right = 278.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 278, 98 )
+title = "Condition"
+slot/0/right_enabled = true
+slot/0/right_color = Color( 0.054902, 1, 0, 1 )
+slot/1/left_color = Color( 1, 0, 0, 1 )
+slot/1/right_enabled = true
+slot/1/right_color = Color( 1, 0, 0, 1 )
+script = ExtResource( 2 )
+slot_color = Color( 1, 0, 0, 1 )
+
+[node name="NodeLineCount" parent="." index="0"]
+visible = false
+margin_right = 262.0
+
+[node name="HBox" parent="NodeLineCount" index="0"]
+margin_right = 241.0
+
+
+[editable path="NodeLineCount"]

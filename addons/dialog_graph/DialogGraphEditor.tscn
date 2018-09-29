@@ -1,0 +1,494 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/dialog_graph/DialogGraphEditor.gd" type="Script" id=1]
+[ext_resource path="res://addons/dialog_graph/DialogGraph.tscn" type="PackedScene" id=2]
+
+[node name="DialogGraphEditor" type="Control"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Size Flags" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Margin"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 1019.0
+margin_bottom = 595.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HBox" type="HBoxContainer" parent="Panel/Margin/VBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1014.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Conversation" type="Button" parent="Panel/Margin/VBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 95.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Conversation"
+flat = false
+align = 1
+
+[node name="Speech" type="Button" parent="Panel/Margin/VBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 99.0
+margin_right = 157.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Speech"
+flat = false
+align = 1
+
+[node name="Choice" type="Button" parent="Panel/Margin/VBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 161.0
+margin_right = 216.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Choice"
+flat = false
+align = 1
+
+[node name="Condition" type="Button" parent="Panel/Margin/VBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 220.0
+margin_right = 293.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Condition"
+flat = false
+align = 1
+
+[node name="Mux" type="Button" parent="Panel/Margin/VBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 297.0
+margin_right = 336.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Mux"
+flat = false
+align = 1
+
+[node name="Jump" type="Button" parent="Panel/Margin/VBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 340.0
+margin_right = 384.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Jump"
+flat = false
+align = 1
+
+[node name="HBox" type="HBoxContainer" parent="Panel/Margin/VBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 388.0
+margin_right = 1014.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+alignment = 2
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Clear" type="Button" parent="Panel/Margin/VBox/HBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 435.0
+margin_right = 479.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Clear"
+flat = false
+align = 1
+
+[node name="Export" type="Button" parent="Panel/Margin/VBox/HBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 483.0
+margin_right = 535.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Export"
+flat = false
+align = 1
+
+[node name="Save" type="Button" parent="Panel/Margin/VBox/HBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 539.0
+margin_right = 580.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Save"
+flat = false
+align = 1
+
+[node name="Load" type="Button" parent="Panel/Margin/VBox/HBox/HBox"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 584.0
+margin_right = 626.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Load"
+flat = false
+align = 1
+
+[node name="DialogGraph" parent="Panel/Margin/VBox" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 24.0
+margin_right = 1014.0
+margin_bottom = 590.0
+
+[node name="SaveWindow" type="FileDialog" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -199.5
+margin_top = -130.5
+margin_right = 199.5
+margin_bottom = 130.5
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = true
+window_title = "Save Dialog Graph"
+resizable = true
+dialog_hide_on_ok = false
+mode_overrides_title = false
+mode = 4
+access = 2
+filters = PoolStringArray( "*.json ; JSON file" )
+show_hidden_files = false
+current_dir = "D:/Anog/Godot Projects/Dialog Graph Editor"
+current_file = ""
+current_path = "D:/Anog/Godot Projects/Dialog Graph Editor/"
+_sections_unfolded = [ "filters" ]
+
+[node name="ExportWindow" type="FileDialog" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -199.5
+margin_top = -130.5
+margin_right = 199.5
+margin_bottom = 130.5
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = true
+window_title = "Export Dialog Graph"
+resizable = true
+dialog_hide_on_ok = false
+mode_overrides_title = false
+mode = 4
+access = 2
+filters = PoolStringArray( "*.json ; JSON file" )
+show_hidden_files = false
+current_dir = "D:/Anog/Godot Projects/Dialog Graph Editor"
+current_file = ""
+current_path = "D:/Anog/Godot Projects/Dialog Graph Editor/"
+_sections_unfolded = [ "Margin", "Popup", "filters" ]
+
+[node name="LoadWindow" type="FileDialog" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -202.0
+margin_top = -135.5
+margin_right = 202.0
+margin_bottom = 135.5
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = true
+window_title = "Load Dialog Graph"
+resizable = true
+dialog_hide_on_ok = true
+mode_overrides_title = false
+mode = 0
+access = 2
+filters = PoolStringArray( "*.json ; JSON file" )
+show_hidden_files = false
+current_dir = "D:/Anog/Godot Projects/Dialog Graph Editor"
+current_file = ""
+current_path = "D:/Anog/Godot Projects/Dialog Graph Editor/"
+_sections_unfolded = [ "Dialog", "Popup" ]
+
+[node name="ClearWindow" type="ConfirmationDialog" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -167.5
+margin_top = -37.5
+margin_right = 167.5
+margin_bottom = 37.5
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = true
+window_title = "Clear confirmation"
+resizable = false
+dialog_text = "This action would remove all graph nodes.
+Are you sure you want to proceed?"
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Dialog" ]
+
+[node name="DefaultWindow" type="AcceptDialog" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -134.0
+margin_top = -29.0
+margin_right = 134.0
+margin_bottom = 29.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "Oops!"
+resizable = false
+dialog_text = "You forgot to choose default start node!"
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Dialog" ]
+
+[connection signal="pressed" from="Panel/Margin/VBox/HBox/Conversation" to="." method="_on_Conversation_pressed"]
+[connection signal="pressed" from="Panel/Margin/VBox/HBox/Speech" to="." method="_on_Speech_pressed"]
+[connection signal="pressed" from="Panel/Margin/VBox/HBox/Choice" to="." method="_on_Choice_pressed"]
+[connection signal="pressed" from="Panel/Margin/VBox/HBox/Condition" to="." method="_on_Condition_pressed"]
+[connection signal="pressed" from="Panel/Margin/VBox/HBox/Mux" to="." method="_on_Mux_pressed"]
+[connection signal="pressed" from="Panel/Margin/VBox/HBox/Jump" to="." method="_on_Jump_pressed"]
+[connection signal="pressed" from="Panel/Margin/VBox/HBox/HBox/Clear" to="." method="_on_Clear_pressed"]
+[connection signal="pressed" from="Panel/Margin/VBox/HBox/HBox/Export" to="." method="_on_Export_pressed"]
+[connection signal="pressed" from="Panel/Margin/VBox/HBox/HBox/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="Panel/Margin/VBox/HBox/HBox/Load" to="." method="_on_Load_pressed"]
+[connection signal="confirmed" from="SaveWindow" to="." method="_on_SaveWindow_confirmed"]
+[connection signal="confirmed" from="ExportWindow" to="." method="_on_ExportWindow_confirmed"]
+[connection signal="confirmed" from="LoadWindow" to="." method="_on_LoadWindow_confirmed"]
+[connection signal="confirmed" from="ClearWindow" to="." method="_on_ClearWindow_confirmed"]

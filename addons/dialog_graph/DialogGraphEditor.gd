@@ -1,12 +1,12 @@
 tool
 extends Control
 
-var conversation_node = preload("res://addons/dialog_graph/ConversationGraphNode.tscn")
-var speech_node = preload("res://addons/dialog_graph/SpeechGraphNode.tscn")
-var choice_node = preload("res://addons/dialog_graph/ChoiceGraphNode.tscn")
-var condition_node = preload("res://addons/dialog_graph/ConditionGraphNode.tscn")
-var mux_node = preload("res://addons/dialog_graph/MuxGraphNode.tscn")
-var jump_node = preload("res://addons/dialog_graph/JumpGraphNode.tscn")
+var conversation_node = preload("ConversationGraphNode.tscn")
+var speech_node = preload("SpeechGraphNode.tscn")
+var choice_node = preload("ChoiceGraphNode.tscn")
+var condition_node = preload("ConditionGraphNode.tscn")
+var mux_node = preload("MuxGraphNode.tscn")
+var jump_node = preload("JumpGraphNode.tscn")
 var graph
 
 # Called when the node enters the scene tree for the first time.
@@ -74,7 +74,6 @@ func set_data(data):
 			else:
 				i += 1
 		graph.default_conversation.turn_on()
-	#print(graph.get_connection_list())
 
 func _on_Save_pressed():
 	$SaveWindow.popup()
@@ -120,5 +119,4 @@ func _on_Clear_pressed():
 func _on_ClearWindow_confirmed():
 	graph.clear_graph()
 	$ClearWindow.hide()
-
 

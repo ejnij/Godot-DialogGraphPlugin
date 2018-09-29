@@ -1,13 +1,12 @@
 tool
 extends GraphNode
 
-export (PackedScene) var node_line_type = preload("res://addons/dialog_graph/GraphNodeLine.tscn")
+export (PackedScene) var node_line_type = preload("GraphNodeLine.tscn")
 export (Color) var slot_color
 export (int) var start_amount = 1
 export (int) var max_amount = 16
 var node_lines = []
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	rect_min_size = rect_size
 	add_node_lines(start_amount)
@@ -55,7 +54,6 @@ func get_export_data():
 
 func set_data(data):
 	rect_size = Vector2(data["rect_x"], data["rect_y"])
-#	rect_min_size = Vector2(data["rect_min_x"], data["rect_min_y"])
 	offset = Vector2(data["offset_x"], data["offset_y"])
 	if $NodeLineCount.visible:
 		change_node_lines_amount(data["Size"]-start_amount)
@@ -67,7 +65,6 @@ func set_node_line(node_line):
 	pass
 
 func add_node_lines(by_amount):
-	#print("adding " + String(by_amount) + "...")
 	for i in range(0,by_amount):
 		var node_line = node_line_type.instance()
 		node_lines.append(node_line)
@@ -75,7 +72,6 @@ func add_node_lines(by_amount):
 		add_child(node_line)
 
 func remove_node_lines(by_amount):
-	#print("removing " + String(by_amount) + "...")
 	for i in range(0,-by_amount):
 		var id = node_lines.size()-1
 		var node_line = node_lines[id]

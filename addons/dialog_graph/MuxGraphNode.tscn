@@ -8,10 +8,7 @@ title = "Mux"
 slot/0/left_enabled = false
 slot/0/right_enabled = true
 slot/1/left_enabled = true
-slot/1/left_type = 0
 slot/1/left_color = Color( 0.913725, 0.517647, 0.0980392, 1 )
-slot/1/right_enabled = false
-slot/1/right_type = 0
 slot/1/right_color = Color( 0.913725, 0.517647, 0.0980392, 1 )
 script = ExtResource( 2 )
 

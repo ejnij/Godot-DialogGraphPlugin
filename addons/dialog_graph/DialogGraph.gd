@@ -8,9 +8,8 @@ var ids = []
 
 var default_conversation = null
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func replace_default_conversation(new_default):
 	if default_conversation:
@@ -45,7 +44,6 @@ func remove_node(node):
 		if c["from"] == node.get_name() or c["to"] == node.get_name():
 			_on_DialogGraph_disconnection_request(c["from"], c["from_port"], c["to"], c["to_port"])
 	nodes.erase(node)
-	#connections.erase(node.get_name())
 	if default_conversation == node:
 		default_conversation = null
 
@@ -79,7 +77,6 @@ func _on_DialogGraph_connection_request(from, from_slot, to, to_slot):
 		else:
 			connections[from][from_slot]["to"] = to
 			connections[from][from_slot]["to_slot"] = to_slot
-		#print(connections)
 
 func _on_DialogGraph_disconnection_request(from, from_slot, to, to_slot):
 	disconnect_node(from, from_slot, to, to_slot)

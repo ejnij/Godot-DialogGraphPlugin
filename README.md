@@ -31,4 +31,4 @@ These are all the available nodes for now!
 The editor is used for designing dialog graphs which can then be exported and used by the manager node.
 
 ### Manager node
-The manager node is used to manage the dialog graph you exported while your game is running.
+The manager node is used to manage and communicate with the dialog graph you exported, while your game is running.

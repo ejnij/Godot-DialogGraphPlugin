@@ -33,6 +33,7 @@ The editor is used for designing dialog graphs which can then be exported and us
 
 ### Manager node
 [![Manager](/manager.png)](https://raw.githubusercontent.com/ejnij/Godot-DialogGraphPlugin/master/manager.png)
+
 The manager node is used to manage and communicate with the dialog graph you exported, while your game is running.
 
 ## Bugs / Issues

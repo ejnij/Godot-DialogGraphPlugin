@@ -9,6 +9,8 @@ This is the result - a simple plugin that lets you create dialog graphs.
 1) Place the 'addons' folder in your project folder.
 2) In the editor - Project -> Project Settings -> Plugins -> Change the status to 'Active'.
 
+*Note: the Graph Editor is on the bottom of Godot's editor, next to the Animation tab. You need to pull it up.
+
 ## Usage
 The plugin has two parts, the editor and the manager, but before that is explained, lets go over the different nodes.
 ### Dialog Nodes
@@ -48,3 +50,4 @@ To inform it when a choice was chosen, you can use choice_picked(choice_index).
 1. Translation being entered doesn't automatically scale the nodes. It does update when you Load though.
 2. The code for the Manager node is pretty hack-y and not OO-y. Might change that later.
 3. Graph validity isn't reinforced, so some stuff you can get away with while exporting, that would crash the Manager node.
+4. Editor tab doesn't align with other tabs, and starts at 0 height.

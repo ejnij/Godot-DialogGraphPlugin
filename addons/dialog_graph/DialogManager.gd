@@ -15,19 +15,20 @@ func _ready():
 	parse_dialog_data()
 
 func parse_dialog_data():
-	var file = File.new()
-	file.open(dialog_file, File.READ)
-	var data = parse_json(file.get_as_text())
-	file.close()
-	for graph_node in data["nodes"]:
-		#var instance = load("res://addons/dialog_graph/" + data["nodes"][graph_node]["type"]).instance()
-		match data["nodes"][graph_node]["type"]:
-			"Conversation": create_conversation(data, graph_node)
-			"Speech": create_speech(data, graph_node)
-			"Choice": create_choice(data, graph_node)
-			"Condition": create_condition(data, graph_node)
-			"Mux": create_mux(data, graph_node)
-			"Jump": create_jump(data, graph_node)
+	if dialog_file:
+		var file = File.new()
+		file.open(dialog_file, File.READ)
+		var data = parse_json(file.get_as_text())
+		file.close()
+		for graph_node in data["nodes"]:
+			#var instance = load("res://addons/dialog_graph/" + data["nodes"][graph_node]["type"]).instance()
+			match data["nodes"][graph_node]["type"]:
+				"Conversation": create_conversation(data, graph_node)
+				"Speech": create_speech(data, graph_node)
+				"Choice": create_choice(data, graph_node)
+				"Condition": create_condition(data, graph_node)
+				"Mux": create_mux(data, graph_node)
+				"Jump": create_jump(data, graph_node)
 
 func start_dialog(conversation = default_conversation):
 	current = conversations[conversation]

@@ -37,6 +37,8 @@ These are all the available nodes for now!
 The editor is used for designing dialog graphs which can then be exported and used by the manager node.
 The buttons on the left create graph nodes. The buttons on the right let you load/save the dialog graph, export it for the Manager node, or clear the view.
 
+*Clarification: Save and Load use a different file format from Export. The former holds the visual data for the Editor, and the latter holds less information and is used by the Manager node.
+
 ### Manager node
 [![Manager](/manager.png)](https://raw.githubusercontent.com/ejnij/Godot-DialogGraphPlugin/master/manager.png)
 

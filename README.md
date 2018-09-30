@@ -2,6 +2,9 @@
 I needed an easy way to create dialogs for my game. What I needed wasn't that complex, but I did a bit extra for future-proofing.
 This is the result - a simple plugin that lets you create dialog graphs.
 
+*Note: This plugin doesn't provide any functionality to display the dialog in-game. This is something you should do yourself!
+       I might add some basic example for reference if need be.
+
 ## Installation
 1) Place the 'addons' folder in your project folder.
 2) In the editor - Project -> Project Settings -> Plugins -> Change the status to 'Active'.
@@ -30,11 +33,15 @@ These are all the available nodes for now!
 ### Editor
 [![Editor](/editor.png)](https://raw.githubusercontent.com/ejnij/Godot-DialogGraphPlugin/master/editor.png)
 The editor is used for designing dialog graphs which can then be exported and used by the manager node.
+The buttons on the left create graph nodes. The buttons on the right let you load/save the dialog graph, export it for the Manager node, or clear the view.
 
 ### Manager node
 [![Manager](/manager.png)](https://raw.githubusercontent.com/ejnij/Godot-DialogGraphPlugin/master/manager.png)
 
 The manager node is used to manage and communicate with the dialog graph you exported, while your game is running.
+You can choose the exported dialog you created in the Manager node's view.
+It has signals for when it reaches a Speech node or a Choice node. Each providing the relevant dialog data as an Array of Strings.
+To inform it when a choice was chosen, you can use choice_picked(choice_index).
 
 ## Bugs / Issues
 

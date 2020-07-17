@@ -7,7 +7,7 @@ var choice_node = preload("ChoiceGraphNode.tscn")
 var condition_node = preload("ConditionGraphNode.tscn")
 var mux_node = preload("MuxGraphNode.tscn")
 var jump_node = preload("JumpGraphNode.tscn")
-var graph
+var graph = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -50,6 +50,14 @@ func get_export_data():
 	for child in graph.nodes:
 		data["nodes"][child.get_name()] = child.get_export_data()
 	return data
+
+func load_data(file_name):
+	graph.clear_graph()
+	var file = File.new()
+	file.open(file_name, File.READ)
+	var data = parse_json(file.get_as_text())
+	file.close()
+	set_data(data)
 
 func set_data(data):
 	for node in data["nodes"]:
@@ -103,14 +111,8 @@ func _on_ExportWindow_confirmed():
 func _on_Load_pressed():
 	$LoadWindow.popup()
 
-func _on_LoadWindow_confirmed():
-	graph.clear_graph()
-	var file_name = $LoadWindow.current_file
-	var file = File.new()
-	file.open(file_name, File.READ)
-	var data = parse_json(file.get_as_text())
-	file.close()
-	set_data(data)
+func _on_LoadWindow_file_selected(file_name):
+	load_data(file_name)
 	$LoadWindow.hide()
 
 func _on_Clear_pressed():
@@ -119,4 +121,3 @@ func _on_Clear_pressed():
 func _on_ClearWindow_confirmed():
 	graph.clear_graph()
 	$ClearWindow.hide()
-

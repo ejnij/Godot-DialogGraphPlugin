@@ -5,6 +5,8 @@ This is the result - a simple plugin that lets you create dialog graphs.
 *Note: This plugin doesn't provide any functionality to display the dialog in-game. This is something you should do yourself!
        I might add some basic example for reference if need be.
 
+[EDIT 16.10.20] Haven't touched this in a while, I'm planning on doing some work soon(ish)!
+
 ## Installation
 1) Place the 'addons' folder in your project folder.
 2) In the editor - Project -> Project Settings -> Plugins -> Change the status to 'Active'.

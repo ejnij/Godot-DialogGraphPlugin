@@ -6,7 +6,7 @@ This is the result - a simple plugin that lets you create dialog graphs.
        I might add some basic example for reference if need be.
 
 [EDIT 16.10.20] Haven't touched this in a while, I'm planning on doing some work soon(ish)!
-
+[EDIT 25.9.21] Covid be wild eh? 😅😬
 ## Installation
 1) Place the 'addons' folder in your project folder.
 2) In the editor - Project -> Project Settings -> Plugins -> Change the status to 'Active'.
@@ -28,7 +28,7 @@ Choice is where your player replies. It lets you have multiple answers, with eac
 Condition is used when you want a branching point to depend on a variable. It uses the following format - "path/property", where path can be relative, or absolute. When you use a relative path, it is relative to the PARENT of the manager node.
 To use a parent's property, the path should be ".". (This is exactly how it works with get_node())
 #### Mux
-Mux is used as a many-to-one converter. Because the plugin doesn't allow multiple connections connecting to the same slot, this is the solution when you want to route multiple outcomes to the same point.
+Mux is used as a many-to-one converter. Because the plugin doesn't allow multiple connections to the same slot, this is the solution when you want to route multiple routes to the same outcome.
 #### Jump
 Jump allows you to 'jump' to another Conversion, within the same file. This is used to simplify the graph, and lets you set different 'checkpoints' you can return to, or start from, using Conversations.
 

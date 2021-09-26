@@ -84,6 +84,7 @@ func set_data(data):
 		graph.default_conversation.turn_on()
 
 func _on_Save_pressed():
+	$SaveWindow.invalidate()
 	$SaveWindow.popup()
 
 func _on_SaveWindow_confirmed():
@@ -96,6 +97,7 @@ func _on_SaveWindow_confirmed():
 
 func _on_Export_pressed():
 	if graph.default_conversation:
+		$ExportWindow.invalidate()
 		$ExportWindow.popup()
 	else:
 		$DefaultWindow.popup()
@@ -109,6 +111,7 @@ func _on_ExportWindow_confirmed():
 	$ExportWindow.hide()
 
 func _on_Load_pressed():
+	$LoadWindow.invalidate()
 	$LoadWindow.popup()
 
 func _on_LoadWindow_file_selected(file_name):

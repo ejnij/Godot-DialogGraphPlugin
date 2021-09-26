@@ -124,6 +124,7 @@ margin_left = -199.5
 margin_top = -130.5
 margin_right = 199.5
 margin_bottom = 130.5
+rect_min_size = Vector2( 300, 105 )
 popup_exclusive = true
 window_title = "Save Dialog Graph"
 resizable = true
@@ -139,6 +140,7 @@ margin_left = -199.5
 margin_top = -130.5
 margin_right = 199.5
 margin_bottom = 130.5
+rect_min_size = Vector2( 300, 105 )
 popup_exclusive = true
 window_title = "Export Dialog Graph"
 resizable = true
@@ -154,6 +156,7 @@ margin_left = -202.0
 margin_top = -135.5
 margin_right = 202.0
 margin_bottom = 135.5
+rect_min_size = Vector2( 300, 105 )
 popup_exclusive = true
 window_title = "Open a File"
 resizable = true
@@ -170,6 +173,7 @@ margin_left = -167.5
 margin_top = -37.5
 margin_right = 167.5
 margin_bottom = 37.5
+rect_min_size = Vector2( 300, 105 )
 popup_exclusive = true
 window_title = "Clear confirmation"
 dialog_text = "This action would remove all graph nodes.
@@ -186,6 +190,7 @@ margin_right = 134.0
 margin_bottom = 29.0
 window_title = "Oops!"
 dialog_text = "You forgot to choose default start node!"
+
 [connection signal="pressed" from="Panel/Margin/VBox/HBox/Conversation" to="." method="_on_Conversation_pressed"]
 [connection signal="pressed" from="Panel/Margin/VBox/HBox/Speech" to="." method="_on_Speech_pressed"]
 [connection signal="pressed" from="Panel/Margin/VBox/HBox/Choice" to="." method="_on_Choice_pressed"]
